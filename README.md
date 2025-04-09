@@ -78,8 +78,8 @@ curl --location 'http://localhost:3000/dev/mcp' \
 --header 'jsonrpc: 2.0' \
 --data '{
   "jsonrpc": "2.0",
-  "method": "tools/call",
-  "id": 4
+  "method": "tools/list",
+  "id": 1
 }'
 ```
 
