@@ -1,0 +1,18 @@
+service: serverless-mcp-server
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs22.x
+  timeout: 30
+
+plugins:
+  - serverless-offline
+
+functions:
+  mcpServer:
+    handler: src/index.handler
+    events:
+      - http:
+          path: mcp
+          method: post

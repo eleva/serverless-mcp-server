@@ -1,0 +1,25 @@
+{
+  "name": "serverless-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.148",
+    "@types/http-errors": "^2.0.4",
+    "@types/node": "^22.14.0",
+    "serverless-offline": "^14.4.0"
+  },
+  "dependencies": {
+    "@middy/core": "^6.1.6",
+    "@middy/http-error-handler": "^6.1.6",
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "http-errors": "^2.0.0",
+    "middy-mcp": "^0.0.1",
+    "zod": "^3.24.2"
+  }
+}
