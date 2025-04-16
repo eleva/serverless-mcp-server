@@ -103,6 +103,14 @@ curl --location 'http://localhost:3000/dev/mcp' \
 }'
 ```
 
+## 🧪 Test with jest
+
+There are some basic tests included in the `__tests__` folder. You can run them with:
+
+```bash
+npm run test
+```
+
 ## 🧬 Code Breakdown
 This code is based on the awesome work of [Frédéric Barthelet](https://github.com/fredericbarthelet): which has developed a middy middleware for Model Context Protocol (MCP) server integration with AWS Lambda functions in [this repo](https://github.com/fredericbarthelet/middy-mcp)
 
