@@ -2,6 +2,9 @@
 A super simple Model Context Protocol (MCP) server deployed on AWS Lambda and exposed via Amazon API Gateway, deployed with Serverless Framework.
 This skeleton is based on the awesome work of [Frédéric Barthelet](https://github.com/fredericbarthelet): which has developed a middy middleware for Model Context Protocol (MCP) server integration with AWS Lambda functions in [this repo](https://github.com/fredericbarthelet/middy-mcp)
 
+## Long story
+📖[Read the full article here on dev.to](https://dev.to/aws-builders/deploy-a-minimal-mcp-server-on-aws-lambda-with-serverless-framework-3e42)
+
 ## 🛠 Features
 - 🪄 Minimal MCP server setup using @modelcontextprotocol/sdk
 - 🚀 Deployed as a single AWS Lambda function
@@ -144,6 +147,10 @@ Just run:
 sls deploy
 ```
 After deployment, the MCP server will be live at the URL output by the command.
+
+## 🔖 Quotes
+This repository has been quoted in the following newsletters:
+- [Serverless Advocate Newsletter #33](https://serverlessadvocate.substack.com/p/33-resilient-solutions?r=rad0z&utm_campaign=post&utm_medium=web&triedRedirect=true) by [Lee Gilmore](https://www.linkedin.com/in/lee-james-gilmore/) (AWS Hero)
 
 ## 📘 License
 MIT — feel free to fork, tweak, and deploy your own version!
