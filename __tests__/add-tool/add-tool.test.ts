@@ -1,15 +1,14 @@
-// __tests__/mcpAddTool.test.mjs
-import { handler } from '../../src/index.mjs';
+// __tests__/add-tool/add-tool.test.ts
+import { handler } from '../../src/index';
+import { describe, it, expect } from '@jest/globals';
+import { createMockEvent, createMockContext } from '../test-utils'; 
+
 
 describe('MCP Server - tools/call "add" method', () => {
     it('Should return the sum of a and b', async () => {
-        const event = {
-            httpMethod: 'POST',
-            headers: {
-                'content-type': 'application/json',
-                accept: 'application/json',
-                jsonrpc: '2.0',
-            },
+
+        const event = createMockEvent({
+            rawPath: '/add-tool', 
             body: JSON.stringify({
                 jsonrpc: '2.0',
                 id: 2,
@@ -22,12 +21,9 @@ describe('MCP Server - tools/call "add" method', () => {
                     },
                 },
             }),
-        };
-
-        const context = {};
-
+        });
+        const context = createMockContext();
         const response = await handler(event, context);
-
         expect(response.statusCode).toBe(200);
 
         const body = JSON.parse(response.body);
@@ -43,4 +39,4 @@ describe('MCP Server - tools/call "add" method', () => {
             text: '8',
         });
     });
-});
+}); 
