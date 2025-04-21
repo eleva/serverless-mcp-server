@@ -1,22 +1,20 @@
-import { handler } from '../../src/index.mjs';
+// __tests__/tool-list/tool-list.test.ts
+import { handler } from '../../src/index';
+import { describe, it, expect } from '@jest/globals';
+import { createMockEvent, createMockContext } from '../test-utils';
 
 describe('MCP Server - tools/list method', () => {
     it('Should return a list of tools', async () => {
-        const event = {
-            httpMethod: 'POST',
-            headers: {
-                'content-type': 'application/json',
-                accept: 'application/json',
-                jsonrpc: '2.0',
-            },
+        const event = createMockEvent({
+            rawPath: '/list-tools', 
             body: JSON.stringify({
                 jsonrpc: '2.0',
                 method: 'tools/list',
                 id: 1,
             }),
-        };
+        });
 
-        const context = {}; // Lambda context (empty for unit tests)
+        const context = createMockContext();
 
         const response = await handler(event, context);
 

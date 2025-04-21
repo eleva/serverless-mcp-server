@@ -41,9 +41,10 @@ npm install
 npm install -g osls
 ```
 
-3. Run Locally with serverless-offline
+3. Run Locally
+This command compiles the TypeScript code and starts the local server using `serverless-offline`.
 ```bash
-npm sls offline
+npm run start
 ```
 
 Local endpoint will be available at:
@@ -141,10 +142,10 @@ export const handler = middy()
 
 ## 📡 Deploy to AWS
 
-Just run:
+This command compiles the TypeScript code and deploys the service to your configured AWS account using Serverless Framework.
 
 ```bash
-sls deploy
+npm run deploy
 ```
 After deployment, the MCP server will be live at the URL output by the command.
 
