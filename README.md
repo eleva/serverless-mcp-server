@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/eleva-serverless-mcp-server-badge.png)](https://mseep.ai/app/eleva-serverless-mcp-server)
+
 # 🧠 serverless-mcp-server
 A super simple Model Context Protocol (MCP) server deployed on AWS Lambda and exposed via Amazon API Gateway, deployed with Serverless Framework.
 This skeleton is based on the awesome work of [Frédéric Barthelet](https://github.com/fredericbarthelet): which has developed a middy middleware for Model Context Protocol (MCP) server integration with AWS Lambda functions in [this repo](https://github.com/fredericbarthelet/middy-mcp)
