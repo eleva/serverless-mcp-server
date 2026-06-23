@@ -1,9 +1,11 @@
 {
   "name": "serverless-mcp-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "scripts": {
-    "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
+    "start": "tsc && serverless offline start",
+    "deploy": "tsc && serverless deploy --force",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest"
   },
   "author": "",
   "license": "ISC",
@@ -11,9 +13,14 @@
   "devDependencies": {
     "@types/aws-lambda": "^8.10.148",
     "@types/http-errors": "^2.0.4",
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.14.0",
     "jest": "^29.7.0",
-    "serverless-offline": "^14.4.0"
+    "serverless-offline": "^13.3.4",
+    "serverless-plugin-typescript": "^2.1.5",
+    "ts-jest": "^29.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@middy/core": "^6.1.6",
