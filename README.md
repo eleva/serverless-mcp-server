@@ -71,6 +71,20 @@ POST `http://localhost:3000/mcp`
 Note that the `/dev/` stage is not needed when using API Gateway V2.
 Note you should change test curl and postman requests accordingly.
 
+## 🧪 Test with [MCP inspector](https://github.com/modelcontextprotocol/inspector)
+
+Run
+```bash
+npx @modelcontextprotocol/inspector node src/index.mjs
+```
+This will start the MCP inspector on port 6274. You can then open the inspector in your browser at ` http://127.0.0.1:6274`.
+Configure parameters in the inspector:
+- Select `HTTP Streamable` as  `Transport Type`
+- Set `URL` to `http://localhost:3000/dev/mcp`
+- Click connect
+
+You'll be able to see the list of tools and their parameters in the inspector.
+
 ## 🧪 Test with curl requests
 
 ### List tools
